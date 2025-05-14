@@ -1,0 +1,17 @@
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\bin\Debug\net8.0-windows\cantinaC#.exe
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\bin\Debug\net8.0-windows\cantinaC#.deps.json
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\bin\Debug\net8.0-windows\cantinaC#.runtimeconfig.json
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\bin\Debug\net8.0-windows\cantinaC#.dll
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\bin\Debug\net8.0-windows\cantinaC#.pdb
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\obj\Debug\net8.0-windows\cantinaC_.Form1.resources
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\obj\Debug\net8.0-windows\cantinaC#.csproj.GenerateResource.cache
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\obj\Debug\net8.0-windows\cantinaC#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\obj\Debug\net8.0-windows\cantinaC#.AssemblyInfoInputs.cache
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\obj\Debug\net8.0-windows\cantinaC#.AssemblyInfo.cs
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\obj\Debug\net8.0-windows\cantinaC#.csproj.CoreCompileInputs.cache
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\obj\Debug\net8.0-windows\cantinaC#.dll
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\obj\Debug\net8.0-windows\refint\cantinaC#.dll
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\obj\Debug\net8.0-windows\cantinaC#.pdb
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\obj\Debug\net8.0-windows\cantinaC#.genruntimeconfig.cache
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\obj\Debug\net8.0-windows\ref\cantinaC#.dll
+C:\Users\25163074\source\repos\cantinaC#\cantinaC#\obj\Debug\net8.0-windows\cantinaC_.Properties.Resources.resources
