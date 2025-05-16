@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\25163074\\source\\repos\\cantinaC#\\cantinaC#\\cantinaC#.csproj": {}
+    "C:\\Users\\25163074\\Documents\\CantinaFinal10\\CantinaFinal\\cantinaC#\\cantinaC#.csproj": {}
   },
   "projects": {
-    "C:\\Users\\25163074\\source\\repos\\cantinaC#\\cantinaC#\\cantinaC#.csproj": {
+    "C:\\Users\\25163074\\Documents\\CantinaFinal10\\CantinaFinal\\cantinaC#\\cantinaC#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\25163074\\source\\repos\\cantinaC#\\cantinaC#\\cantinaC#.csproj",
+        "projectUniqueName": "C:\\Users\\25163074\\Documents\\CantinaFinal10\\CantinaFinal\\cantinaC#\\cantinaC#.csproj",
         "projectName": "cantinaC#",
-        "projectPath": "C:\\Users\\25163074\\source\\repos\\cantinaC#\\cantinaC#\\cantinaC#.csproj",
+        "projectPath": "C:\\Users\\25163074\\Documents\\CantinaFinal10\\CantinaFinal\\cantinaC#\\cantinaC#.csproj",
         "packagesPath": "C:\\Users\\25163074\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\25163074\\source\\repos\\cantinaC#\\cantinaC#\\obj\\",
+        "outputPath": "C:\\Users\\25163074\\Documents\\CantinaFinal10\\CantinaFinal\\cantinaC#\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
