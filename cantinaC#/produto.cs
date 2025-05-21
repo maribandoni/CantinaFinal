@@ -10,7 +10,7 @@ namespace cantinaC_
     {
         public string Nome { get; set; }
         public decimal Preco { get; set; }
-
+        
         public produto(string nome, decimal preco)
         {
             Nome = nome;
@@ -22,4 +22,5 @@ namespace cantinaC_
             return $"{Nome} - {Preco:C}";
         }
     }
+   
 }
