@@ -93,6 +93,36 @@ namespace cantinaC_.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1000106593_removebg_preview__2_ {
+            get {
+                object obj = ResourceManager.GetObject("1000106593-removebg-preview (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bolt {
+            get {
+                object obj = ResourceManager.GetObject("bolt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bolt_logo_transparent {
+            get {
+                object obj = ResourceManager.GetObject("bolt_logo_transparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ChatGPT_Image_12_de_mai__de_2025__11_05_07 {
             get {
                 object obj = ResourceManager.GetObject("ChatGPT Image 12 de mai. de 2025, 11_05_07", resourceCulture);

@@ -121,6 +121,9 @@
   <data name="1000106593-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1000106593-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bolt_logo_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bolt_logo_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="download1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,6 +139,9 @@
   <data name="ChatGPT Image 12 de mai1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ChatGPT Image 12 de mai. de 2025, 11_05_071.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1000106593-removebg-preview (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1000106593-removebg-preview (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ChatGPT Image 12 de mai. de 2025, 11_05_07" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ChatGPT Image 12 de mai. de 2025, 11_05_07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -144,5 +150,8 @@
   </data>
   <data name="ChatGPT Image 19 de mai. de 2025, 09_35_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ChatGPT Image 19 de mai. de 2025, 09_35_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bolt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bolt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

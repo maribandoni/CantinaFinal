@@ -32,9 +32,10 @@
               "RelativeDocumentMoniker": "cantinaC#\\Form1.cs",
               "ToolTip": "C:\\Users\\25163074\\Documents\\CantinaFinal10\\CantinaFinal\\CantinaFinal\\cantinaC#\\Form1.cs",
               "RelativeToolTip": "cantinaC#\\Form1.cs",
-              "ViewState": "AgIAAK8AAAAAAAAAAAAUwHcAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAmwFUAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T11:14:19.007Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -47,7 +48,8 @@
               "RelativeToolTip": "cantinaC#\\produto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T11:14:14.799Z"
+              "WhenOpened": "2025-05-16T11:14:14.799Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -58,7 +60,8 @@
               "ToolTip": "C:\\Users\\25163074\\Documents\\CantinaFinal10\\CantinaFinal\\CantinaFinal\\cantinaC#\\Form1.cs [Projeto]",
               "RelativeToolTip": "cantinaC#\\Form1.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T11:14:06.099Z"
+              "WhenOpened": "2025-05-16T11:14:06.099Z",
+              "EditorCaption": " [Projeto]"
             }
           ]
         }

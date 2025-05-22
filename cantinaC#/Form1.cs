@@ -130,7 +130,7 @@ namespace cantinaC_
 
             if (metodoPagamento == "Dinheiro")
             {
-                string entrada = Interaction.InputBox("Informe o valor pago pelo cliente:", "Pagamento em Dinheiro", $"{totalCarrinho:F2}");
+                string entrada = Interaction.InputBox("Informe o valor pago pelo cliente:", "Pagamento em Dinheiro");
 
                 if (decimal.TryParse(entrada, out decimal valorPago))
                 {
@@ -139,27 +139,43 @@ namespace cantinaC_
                         MessageBox.Show("Valor insuficiente!");
                         return;
                     }
-
                     decimal troco = valorPago - totalCarrinho;
+                    if (valorPago > totalCarrinho)
+                    {
+                        MessageBox.Show($"Troco: {troco}");
+                        Limpar();
+                        return;
+                    }
+
                     var resultado = MessageBox.Show($"Total a pagar: R$ {totalCarrinho:F2}", "Finalizar compra", MessageBoxButtons.YesNo);
 
                     if (resultado == DialogResult.Yes)
                     {
-                        MessageBox.Show("Compra finalizada!");
-                        carrinhos.Clear();
-                        totalCarrinho = 0;
-                        ListarCarrinho();
-                        TotalPagar();
-
-                        textBox1.Clear();
-                        lblNome.Text = "";
-                        listBoxCarrinho.Items.Clear();
-                        numericUpDownQuantidade.Value = 1;
+                        Limpar();
                     }
-                  }
-               }
+                }
             }
+            else
+            {
+                Limpar();
+            }
+        }
+        private void Limpar()
+        {
+            MessageBox.Show("Compra finalizada!");
+            carrinhos.Clear();
+            totalCarrinho = 0;
+            ListarCarrinho();
+            TotalPagar();
 
+            textBox1.Clear();
+            lblNome.Text = "";
+            listBoxCarrinho.Items.Clear();
+            numericUpDownQuantidade.Value = 1;
+            listBoxProduto.SelectedIndex = -1;
+            comboBox1.SelectedIndex = -1;
+            comboBox1.Text = "Método de Pagamento";
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -209,9 +225,13 @@ namespace cantinaC_
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
-       
+
+        private void numericUpDownQuantidade_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
