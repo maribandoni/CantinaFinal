@@ -10,16 +10,19 @@ namespace cantinaC_
     {
         public string Nome { get; set; }
         public decimal Preco { get; set; }
+
+        public int Quantidade { get; set; }
         
         public produto(string nome, decimal preco)
         {
             Nome = nome;
             Preco = preco;
+            Quantidade = 0;
         }
 
         public override string ToString()
         {
-            return $"{Nome} - {Preco:C}";
+            return $"{Nome} - {Preco:C} X {Quantidade}";
         }
     }
    

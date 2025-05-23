@@ -4,6 +4,7 @@ using System.Reflection.Emit;
 using System.Windows.Forms;
 using static cantinaC_.Form1;
 using Microsoft.VisualBasic;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace cantinaC_
 {
@@ -41,7 +42,7 @@ namespace cantinaC_
             listBoxProduto.Items.Clear();
             foreach (var produto in produtos)
             {
-                listBoxProduto.Items.Add(produto);
+                listBoxProduto.Items.Add({produto.Nome});
             }
         }
 
@@ -61,7 +62,7 @@ namespace cantinaC_
                 return;
             }
 
-            var produto = (produto)listBoxProduto.SelectedItem;
+            var produtoSelecionado= (produto)listBoxProduto.SelectedItem;
             int quantidade = (int)numericUpDownQuantidade.Value;
 
             if (quantidade <= 0)
@@ -69,21 +70,29 @@ namespace cantinaC_
                 MessageBox.Show("Informe uma quantidade válida");
                 return;
             }
-            for (int i = 0; i < quantidade; i++)
+            var produtoNoCarrinho = carrinhos.FirstOrDefault(p => p.Nome == produtoSelecionado.Nome);
+            if (produtoNoCarrinho != null)
             {
-                carrinhos.Add(produto);
-
+                produtoNoCarrinho.Quantidade += quantidade;
             }
-            totalCarrinho += produto.Preco * quantidade;
+            else
+            {
+                var novoProduto = new produto(produtoSelecionado.Nome, produtoSelecionado.Preco)
+                {
+                    Quantidade = quantidade
+                };
+                carrinhos.Add(novoProduto);
+            }
+
+            totalCarrinho += produtoSelecionado.Preco * quantidade;
 
             ListarCarrinho();
-            TotalPagar();
+            total.Text = $"Total a pagar: R$ {totalCarrinho:F2}";
             numericUpDownQuantidade.Value = 1;
+            totalCarrinho += produtoSelecionado.Preco * quantidade;
 
-        }
-        private void TotalPagar()
-        {
-            total.Text = $"Total a pagar:R$ {totalCarrinho:F2}";
+            
+
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
@@ -97,7 +106,7 @@ namespace cantinaC_
             carrinhos.Remove(produto);
             totalCarrinho -= produto.Preco;
             ListarCarrinho();
-            TotalPagar();
+            total.Text = $"Total a pagar:R$ {totalCarrinho:F2}";
         }
 
         private void listBoxProduto_SelectedIndexChanged(object sender, EventArgs e)
@@ -126,56 +135,70 @@ namespace cantinaC_
                 MessageBox.Show("Carrinho vazio");
                 return;
             }
+            if (comboBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione a Forma de Pagamento");
+                return;
+            }
+            if (checkBox1.Checked)
+            {
+                MessageBox.Show("Pedido Marcado como Para Viagem");
+            }
+            else
+            {
+                MessageBox.Show("Pedido Para Consumo no Local");
+            }
+
             string metodoPagamento = comboBox1.SelectedItem?.ToString();
+
+            decimal valorPago = 0;
 
             if (metodoPagamento == "Dinheiro")
             {
                 string entrada = Interaction.InputBox("Informe o valor pago pelo cliente:", "Pagamento em Dinheiro");
+                decimal.TryParse(entrada, out valorPago);
+                decimal troco = valorPago - totalCarrinho;
 
-                if (decimal.TryParse(entrada, out decimal valorPago))
+                if (troco < 0)
                 {
-                    if (valorPago < totalCarrinho)
-                    {
-                        MessageBox.Show("Valor insuficiente!");
-                        return;
-                    }
-                    decimal troco = valorPago - totalCarrinho;
-                    if (valorPago > totalCarrinho)
-                    {
-                        MessageBox.Show($"Troco: {troco}");
-                        Limpar();
-                        return;
-                    }
-
-                    var resultado = MessageBox.Show($"Total a pagar: R$ {totalCarrinho:F2}", "Finalizar compra", MessageBoxButtons.YesNo);
-
-                    if (resultado == DialogResult.Yes)
-                    {
-                        Limpar();
-                    }
+                    MessageBox.Show("Valor insuficiente!");
+                    return;
                 }
+                else
+                {
+                    MessageBox.Show($"Troco: {troco}");
+                    Limpar();
+                }
+
+                MessageBox.Show("Compra finalizada!");
+                Limpar();
             }
             else
             {
+                MessageBox.Show("Compra finalizada!");
                 Limpar();
             }
-        }
+
+            }
         private void Limpar()
         {
-            MessageBox.Show("Compra finalizada!");
+            
             carrinhos.Clear();
-            totalCarrinho = 0;
             ListarCarrinho();
-            TotalPagar();
+            total.Text = "Total:";
+            checkBox1.Checked = false;
 
             textBox1.Clear();
-            lblNome.Text = "";
             listBoxCarrinho.Items.Clear();
             numericUpDownQuantidade.Value = 1;
             listBoxProduto.SelectedIndex = -1;
             comboBox1.SelectedIndex = -1;
             comboBox1.Text = "Método de Pagamento";
+
         }
+
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -199,7 +222,7 @@ namespace cantinaC_
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             string cliente = textBox1.Text;
-            lblNome.Text = cliente;
+          
 
         }
 
@@ -229,6 +252,21 @@ namespace cantinaC_
         }
 
         private void numericUpDownQuantidade_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }

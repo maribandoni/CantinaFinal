@@ -37,12 +37,12 @@
             pictureBox3 = new PictureBox();
             numericUpDownQuantidade = new NumericUpDown();
             textBox1 = new TextBox();
-            lblCliente = new Label();
             label1 = new Label();
-            lblNome = new Label();
             comboBox1 = new ComboBox();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
+            checkBox1 = new CheckBox();
+            dateTimePicker1 = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownQuantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -51,7 +51,7 @@
             // 
             // btnAdicionar
             // 
-            btnAdicionar.BackColor = Color.FromArgb(202, 196, 183);
+            btnAdicionar.BackColor = Color.FromArgb(243, 241, 238);
             btnAdicionar.Font = new Font("Stylus BT", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAdicionar.ForeColor = Color.Black;
             btnAdicionar.Location = new Point(264, 165);
@@ -77,7 +77,7 @@
             // 
             // btnRemover
             // 
-            btnRemover.BackColor = Color.FromArgb(202, 196, 183);
+            btnRemover.BackColor = Color.FromArgb(243, 241, 238);
             btnRemover.Font = new Font("Stylus BT", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRemover.Location = new Point(264, 238);
             btnRemover.Name = "btnRemover";
@@ -101,7 +101,7 @@
             // total
             // 
             total.AutoSize = true;
-            total.BackColor = Color.FromArgb(202, 196, 183);
+            total.BackColor = Color.FromArgb(243, 241, 238);
             total.Font = new Font("Stylus BT", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             total.Location = new Point(705, 165);
             total.Name = "total";
@@ -113,10 +113,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(202, 196, 183);
+            label2.BackColor = Color.FromArgb(243, 241, 238);
             label2.Font = new Font("Stylus BT", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(705, 229);
+            label2.Location = new Point(705, 359);
             label2.Name = "label2";
             label2.Size = new Size(108, 18);
             label2.TabIndex = 5;
@@ -135,52 +135,38 @@
             // 
             // numericUpDownQuantidade
             // 
-            numericUpDownQuantidade.BackColor = Color.FromArgb(202, 196, 183);
+            numericUpDownQuantidade.BackColor = Color.FromArgb(243, 241, 238);
             numericUpDownQuantidade.Location = new Point(288, 194);
+            numericUpDownQuantidade.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownQuantidade.Name = "numericUpDownQuantidade";
             numericUpDownQuantidade.Size = new Size(120, 23);
             numericUpDownQuantidade.TabIndex = 10;
+            numericUpDownQuantidade.Value = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownQuantidade.ValueChanged += numericUpDownQuantidade_ValueChanged;
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.FromArgb(202, 196, 183);
-            textBox1.Location = new Point(12, 134);
+            textBox1.BackColor = Color.FromArgb(243, 241, 238);
+            textBox1.Location = new Point(82, 139);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(203, 23);
+            textBox1.Size = new Size(142, 23);
             textBox1.TabIndex = 12;
             textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // lblCliente
-            // 
-            lblCliente.AutoSize = true;
-            lblCliente.Location = new Point(584, 120);
-            lblCliente.Name = "lblCliente";
-            lblCliente.Size = new Size(0, 15);
-            lblCliente.TabIndex = 13;
-            lblCliente.Click += label1_Click_1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(481, 145);
+            label1.BackColor = Color.FromArgb(243, 241, 238);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(15, 139);
             label1.Name = "label1";
-            label1.Size = new Size(47, 15);
+            label1.Size = new Size(61, 21);
             label1.TabIndex = 14;
             label1.Text = "Cliente:";
             // 
-            // lblNome
-            // 
-            lblNome.AutoSize = true;
-            lblNome.Location = new Point(534, 145);
-            lblNome.Name = "lblNome";
-            lblNome.Size = new Size(10, 15);
-            lblNome.TabIndex = 15;
-            lblNome.Text = " ";
-            // 
             // comboBox1
             // 
-            comboBox1.BackColor = Color.FromArgb(202, 196, 183);
+            comboBox1.BackColor = Color.FromArgb(243, 241, 238);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Pix", "Cartão de Débito", "Cartão de Crédito", "Dinheiro" });
             comboBox1.Location = new Point(705, 191);
@@ -193,9 +179,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources._1000106593_removebg_preview__2_;
-            pictureBox1.Location = new Point(-16, -13);
+            pictureBox1.Location = new Point(-16, -19);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(903, 595);
+            pictureBox1.Size = new Size(1029, 674);
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
             // 
@@ -209,17 +195,38 @@
             pictureBox2.TabIndex = 19;
             pictureBox2.TabStop = false;
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.BackColor = Color.FromArgb(243, 241, 238);
+            checkBox1.Location = new Point(705, 220);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(92, 19);
+            checkBox1.TabIndex = 20;
+            checkBox1.Text = "Para Viagem";
+            checkBox1.UseVisualStyleBackColor = false;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Time;
+            dateTimePicker1.Location = new Point(15, 420);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(84, 23);
+            dateTimePicker1.TabIndex = 21;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(202, 196, 183);
             ClientSize = new Size(886, 558);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(checkBox1);
             Controls.Add(pictureBox2);
             Controls.Add(comboBox1);
-            Controls.Add(lblNome);
             Controls.Add(label1);
-            Controls.Add(lblCliente);
             Controls.Add(textBox1);
             Controls.Add(numericUpDownQuantidade);
             Controls.Add(pictureBox3);
@@ -252,11 +259,11 @@
         private PictureBox pictureBox3;
         private NumericUpDown numericUpDownQuantidade;
         private TextBox textBox1;
-        private Label lblCliente;
         private Label label1;
-        private Label lblNome;
         private ComboBox comboBox1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private CheckBox checkBox1;
+        private DateTimePicker dateTimePicker1;
     }
 }
