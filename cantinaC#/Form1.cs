@@ -63,7 +63,7 @@ namespace cantinaC_
                 return;
             }
 
-            var produtoSelecionado= (produto)listBoxProduto.SelectedItem;
+            var produtoSelecionado = (produto)listBoxProduto.SelectedItem;
             int quantidade = (int)numericUpDownQuantidade.Value;
 
             if (quantidade <= 0)
@@ -90,9 +90,9 @@ namespace cantinaC_
             ListarCarrinho();
             total.Text = $"Total a pagar: R$ {totalCarrinho:F2}";
             numericUpDownQuantidade.Value = 1;
-           
 
-            
+
+
 
         }
 
@@ -195,10 +195,10 @@ namespace cantinaC_
                 Limpar();
             }
 
-            }
+        }
         private void Limpar()
         {
-            
+
             carrinhos.Clear();
             ListarCarrinho();
             total.Text = "Total:";
@@ -265,7 +265,7 @@ namespace cantinaC_
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             string cliente = textBox1.Text;
-          
+
 
         }
 
@@ -310,6 +310,17 @@ namespace cantinaC_
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            balcao Balcao = new balcao();
+            Balcao.Show();
+        }
+
+        private void pictureBox1_Click_3(object sender, EventArgs e)
         {
 
         }

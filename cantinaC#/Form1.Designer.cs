@@ -39,14 +39,15 @@
             textBox1 = new TextBox();
             label1 = new Label();
             comboBox1 = new ComboBox();
-            pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             checkBox1 = new CheckBox();
             dateTimePicker1 = new DateTimePicker();
+            button1 = new Button();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownQuantidade).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnAdicionar
@@ -54,7 +55,7 @@
             btnAdicionar.BackColor = Color.FromArgb(243, 241, 238);
             btnAdicionar.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAdicionar.ForeColor = Color.Black;
-            btnAdicionar.Location = new Point(264, 159);
+            btnAdicionar.Location = new Point(264, 165);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(157, 29);
             btnAdicionar.TabIndex = 0;
@@ -78,7 +79,7 @@
             // 
             btnRemover.BackColor = Color.FromArgb(243, 241, 238);
             btnRemover.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnRemover.Location = new Point(264, 238);
+            btnRemover.Location = new Point(264, 227);
             btnRemover.Name = "btnRemover";
             btnRemover.Size = new Size(157, 27);
             btnRemover.TabIndex = 2;
@@ -92,7 +93,7 @@
             listBoxCarrinho.Font = new Font("Agrandir Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listBoxCarrinho.FormattingEnabled = true;
             listBoxCarrinho.ItemHeight = 21;
-            listBoxCarrinho.Location = new Point(481, 163);
+            listBoxCarrinho.Location = new Point(476, 163);
             listBoxCarrinho.Name = "listBoxCarrinho";
             listBoxCarrinho.Size = new Size(195, 214);
             listBoxCarrinho.TabIndex = 3;
@@ -137,7 +138,7 @@
             // 
             numericUpDownQuantidade.BackColor = Color.FromArgb(243, 241, 238);
             numericUpDownQuantidade.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            numericUpDownQuantidade.Location = new Point(288, 194);
+            numericUpDownQuantidade.Location = new Point(287, 195);
             numericUpDownQuantidade.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownQuantidade.Name = "numericUpDownQuantidade";
             numericUpDownQuantidade.Size = new Size(120, 26);
@@ -178,15 +179,6 @@
             comboBox1.Text = "Método de Pagamento";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources._1000106593_removebg_preview__2_;
-            pictureBox1.Location = new Point(-16, -19);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1029, 674);
-            pictureBox1.TabIndex = 18;
-            pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.bolt;
@@ -219,12 +211,35 @@
             dateTimePicker1.TabIndex = 21;
             dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(24, 449);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 22;
+            button1.Text = "Balcão";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources._1000106593_removebg_preview__3_2;
+            pictureBox1.Location = new Point(-7, -16);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(659, 378);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 23;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click_3;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(202, 196, 183);
             ClientSize = new Size(886, 558);
+            Controls.Add(button1);
             Controls.Add(dateTimePicker1);
             Controls.Add(checkBox1);
             Controls.Add(pictureBox2);
@@ -245,8 +260,8 @@
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownQuantidade).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -264,9 +279,10 @@
         private TextBox textBox1;
         private Label label1;
         private ComboBox comboBox1;
-        private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private CheckBox checkBox1;
         private DateTimePicker dateTimePicker1;
+        private Button button1;
+        private PictureBox pictureBox1;
     }
 }

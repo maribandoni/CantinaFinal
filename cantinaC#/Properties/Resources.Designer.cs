@@ -103,6 +103,36 @@ namespace cantinaC_.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1000106593_removebg_preview__3_ {
+            get {
+                object obj = ResourceManager.GetObject("1000106593-removebg-preview (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1000106593_removebg_preview__3_1 {
+            get {
+                object obj = ResourceManager.GetObject("1000106593-removebg-preview (3)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1000106593_removebg_preview__3_2 {
+            get {
+                object obj = ResourceManager.GetObject("1000106593-removebg-preview (3)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bolt {
             get {
                 object obj = ResourceManager.GetObject("bolt", resourceCulture);
@@ -116,6 +146,16 @@ namespace cantinaC_.Properties {
         internal static System.Drawing.Bitmap bolt_logo_transparent {
             get {
                 object obj = ResourceManager.GetObject("bolt_logo_transparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2025_05_22_085313 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2025-05-22 085313", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +216,16 @@ namespace cantinaC_.Properties {
         internal static System.Drawing.Bitmap download1 {
             get {
                 object obj = ResourceManager.GetObject("download1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap raio {
+            get {
+                object obj = ResourceManager.GetObject("raio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
