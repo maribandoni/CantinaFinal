@@ -22,7 +22,7 @@ namespace cantinaC_
 
         public override string ToString()
         {
-            return $"{Nome} - {Preco:C} X {Quantidade}";
+            return $"{Nome} - {Preco:C}";
         }
     }
    

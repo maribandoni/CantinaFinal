@@ -52,11 +52,11 @@
             // btnAdicionar
             // 
             btnAdicionar.BackColor = Color.FromArgb(243, 241, 238);
-            btnAdicionar.Font = new Font("Stylus BT", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAdicionar.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAdicionar.ForeColor = Color.Black;
-            btnAdicionar.Location = new Point(264, 165);
+            btnAdicionar.Location = new Point(264, 159);
             btnAdicionar.Name = "btnAdicionar";
-            btnAdicionar.Size = new Size(157, 23);
+            btnAdicionar.Size = new Size(157, 29);
             btnAdicionar.TabIndex = 0;
             btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = false;
@@ -65,23 +65,22 @@
             // listBoxProduto
             // 
             listBoxProduto.BackColor = Color.FromArgb(230, 255, 0);
-            listBoxProduto.Font = new Font("Stylus BT", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listBoxProduto.Font = new Font("Agrandir Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listBoxProduto.FormattingEnabled = true;
-            listBoxProduto.ItemHeight = 19;
-            listBoxProduto.Items.AddRange(new object[] { "Coxinha - R$ 5,00", "Pastel -  R$ 6,00", "Refrigerante - R$ 4,50", "Suco - R$ 3,00", "Brigadeiro - R$ 2,00" });
+            listBoxProduto.ItemHeight = 21;
             listBoxProduto.Location = new Point(12, 163);
             listBoxProduto.Name = "listBoxProduto";
-            listBoxProduto.Size = new Size(230, 251);
+            listBoxProduto.Size = new Size(230, 235);
             listBoxProduto.TabIndex = 1;
             listBoxProduto.SelectedIndexChanged += listBoxProduto_SelectedIndexChanged;
             // 
             // btnRemover
             // 
             btnRemover.BackColor = Color.FromArgb(243, 241, 238);
-            btnRemover.Font = new Font("Stylus BT", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRemover.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRemover.Location = new Point(264, 238);
             btnRemover.Name = "btnRemover";
-            btnRemover.Size = new Size(157, 23);
+            btnRemover.Size = new Size(157, 27);
             btnRemover.TabIndex = 2;
             btnRemover.Text = "Remover";
             btnRemover.UseVisualStyleBackColor = false;
@@ -90,8 +89,9 @@
             // listBoxCarrinho
             // 
             listBoxCarrinho.BackColor = Color.FromArgb(230, 255, 0);
+            listBoxCarrinho.Font = new Font("Agrandir Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listBoxCarrinho.FormattingEnabled = true;
-            listBoxCarrinho.ItemHeight = 15;
+            listBoxCarrinho.ItemHeight = 21;
             listBoxCarrinho.Location = new Point(481, 163);
             listBoxCarrinho.Name = "listBoxCarrinho";
             listBoxCarrinho.Size = new Size(195, 214);
@@ -102,10 +102,10 @@
             // 
             total.AutoSize = true;
             total.BackColor = Color.FromArgb(243, 241, 238);
-            total.Font = new Font("Stylus BT", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            total.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             total.Location = new Point(705, 165);
             total.Name = "total";
-            total.Size = new Size(48, 19);
+            total.Size = new Size(49, 22);
             total.TabIndex = 4;
             total.Text = "Total:";
             total.Click += label1_Click;
@@ -114,11 +114,11 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.FromArgb(243, 241, 238);
-            label2.Font = new Font("Stylus BT", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(705, 359);
+            label2.Location = new Point(705, 355);
             label2.Name = "label2";
-            label2.Size = new Size(108, 18);
+            label2.Size = new Size(123, 22);
             label2.TabIndex = 5;
             label2.Text = "Finalizar pedido";
             label2.Click += label2_Click;
@@ -136,10 +136,11 @@
             // numericUpDownQuantidade
             // 
             numericUpDownQuantidade.BackColor = Color.FromArgb(243, 241, 238);
+            numericUpDownQuantidade.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             numericUpDownQuantidade.Location = new Point(288, 194);
             numericUpDownQuantidade.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownQuantidade.Name = "numericUpDownQuantidade";
-            numericUpDownQuantidade.Size = new Size(120, 23);
+            numericUpDownQuantidade.Size = new Size(120, 26);
             numericUpDownQuantidade.TabIndex = 10;
             numericUpDownQuantidade.Value = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownQuantidade.ValueChanged += numericUpDownQuantidade_ValueChanged;
@@ -157,21 +158,22 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(243, 241, 238);
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(15, 139);
             label1.Name = "label1";
-            label1.Size = new Size(61, 21);
+            label1.Size = new Size(67, 23);
             label1.TabIndex = 14;
             label1.Text = "Cliente:";
             // 
             // comboBox1
             // 
             comboBox1.BackColor = Color.FromArgb(243, 241, 238);
+            comboBox1.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Pix", "Cartão de Débito", "Cartão de Crédito", "Dinheiro" });
-            comboBox1.Location = new Point(705, 191);
+            comboBox1.Location = new Point(705, 196);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(149, 23);
+            comboBox1.Size = new Size(149, 25);
             comboBox1.TabIndex = 17;
             comboBox1.Text = "Método de Pagamento";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
@@ -199,9 +201,10 @@
             // 
             checkBox1.AutoSize = true;
             checkBox1.BackColor = Color.FromArgb(243, 241, 238);
-            checkBox1.Location = new Point(705, 220);
+            checkBox1.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBox1.Location = new Point(705, 227);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(92, 19);
+            checkBox1.Size = new Size(100, 21);
             checkBox1.TabIndex = 20;
             checkBox1.Text = "Para Viagem";
             checkBox1.UseVisualStyleBackColor = false;

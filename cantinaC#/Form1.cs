@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using static cantinaC_.Form1;
 using Microsoft.VisualBasic;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using System.Text;
 
 namespace cantinaC_
 {
@@ -42,7 +43,7 @@ namespace cantinaC_
             listBoxProduto.Items.Clear();
             foreach (var produto in produtos)
             {
-                listBoxProduto.Items.Add({produto.Nome});
+                listBoxProduto.Items.Add(produto);
             }
         }
 
@@ -51,7 +52,7 @@ namespace cantinaC_
             listBoxCarrinho.Items.Clear();
             foreach (var carrinho in carrinhos)
             {
-                listBoxCarrinho.Items.Add(carrinho);
+                listBoxCarrinho.Items.Add($"{carrinho.Quantidade}x {carrinho.Nome} - R$ {carrinho.Preco * carrinho.Quantidade:F2}");
             }
         }
         private void button1_Click(object sender, EventArgs e)
@@ -84,12 +85,12 @@ namespace cantinaC_
                 carrinhos.Add(novoProduto);
             }
 
-            totalCarrinho += produtoSelecionado.Preco * quantidade;
+            totalCarrinho = carrinhos.Sum(p => p.Preco * p.Quantidade);
 
             ListarCarrinho();
             total.Text = $"Total a pagar: R$ {totalCarrinho:F2}";
             numericUpDownQuantidade.Value = 1;
-            totalCarrinho += produtoSelecionado.Preco * quantidade;
+           
 
             
 
@@ -102,13 +103,26 @@ namespace cantinaC_
                 MessageBox.Show("Selecione um produto");
                 return;
             }
-            var produto = (produto)listBoxCarrinho.SelectedItem;
-            carrinhos.Remove(produto);
-            totalCarrinho -= produto.Preco;
-            ListarCarrinho();
-            total.Text = $"Total a pagar:R$ {totalCarrinho:F2}";
-        }
 
+            int selectedIndex = listBoxCarrinho.SelectedIndex;
+            int quantidadeRemover = (int)numericUpDownQuantidade.Value;
+            if (selectedIndex >= 0 && selectedIndex < carrinhos.Count)
+            {
+                var produto = carrinhos[selectedIndex];
+                if (produto.Quantidade > quantidadeRemover)
+                {
+                    produto.Quantidade -= quantidadeRemover;
+                }
+                else
+                {
+                    carrinhos.RemoveAt(selectedIndex);
+                }
+
+                totalCarrinho = carrinhos.Sum(p => p.Preco * p.Quantidade);
+                ListarCarrinho();
+                total.Text = $"Total a pagar: R$ {totalCarrinho:F2}";
+            }
+        }
         private void listBoxProduto_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
@@ -167,6 +181,7 @@ namespace cantinaC_
                 else
                 {
                     MessageBox.Show($"Troco: {troco}");
+                    Extrato();
                     Limpar();
                 }
 
@@ -176,6 +191,7 @@ namespace cantinaC_
             else
             {
                 MessageBox.Show("Compra finalizada!");
+                Extrato();
                 Limpar();
             }
 
@@ -197,7 +213,34 @@ namespace cantinaC_
 
         }
 
+        private void Extrato()
+        {
+            string nomeCliente = textBox1.Text;
+            string metodoPagamento = comboBox1.SelectedItem?.ToString() ?? "Não informado";
+            string tipoPedido = checkBox1.Checked ? "Para Viagem" : "Consumo no Local";
+            string dataAtual = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
 
+            if (carrinhos.Count == 0)
+            {
+                MessageBox.Show("Carrinho vazio.", "extrato da compra");
+                return;
+            }
+            StringBuilder extrato = new StringBuilder();
+            extrato.AppendLine($"Data: {dataAtual}");
+            extrato.AppendLine($"Nome Cliente: {nomeCliente}");
+            extrato.AppendLine($"Forma de Pagamento: {metodoPagamento}");
+            extrato.AppendLine($"Tipo de Pedido: {tipoPedido}");
+            extrato.AppendLine("\nProdutos:");
+
+            foreach (var item in carrinhos)
+            {
+                extrato.AppendLine($"{item.Quantidade}x {item.Nome} - R$ {item.Preco * item.Quantidade:F2}");
+            }
+
+            extrato.AppendLine($"\nTotal: R$ {carrinhos.Sum(p => p.Preco * p.Quantidade):F2}");
+
+            MessageBox.Show(extrato.ToString(), "Extrato da compra");
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
