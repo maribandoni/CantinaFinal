@@ -182,7 +182,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.bolt;
-            pictureBox2.Location = new Point(705, -3);
+            pictureBox2.Location = new Point(705, -26);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(182, 123);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;

@@ -25,16 +25,16 @@ namespace cantinaC_
 
         private void AdicionarProduto()
         {
-            produtos.Add(new produto("Pão de queijo", 3.50m));
-            produtos.Add(new produto("Coxinha", 5.00m));
-            produtos.Add(new produto("Pastel de carne", 6.00m));
-            produtos.Add(new produto("Pastel de queijo", 5.50m));
-            produtos.Add(new produto("Suco natural(300ml)", 4.00m));
-            produtos.Add(new produto("Refrigerante lata", 4.50m));
-            produtos.Add(new produto("Hambúrguer simples ", 8.00m));
-            produtos.Add(new produto("Hambúrguer com queijo", 9.00m));
-            produtos.Add(new produto("X-Tudo", 12.00m));
-            produtos.Add(new produto("Água mineral(500ml)", 2.50m));
+            produtos.Add(new produto("Pão de queijo", 3.50m, false));
+            produtos.Add(new produto("Coxinha", 5.00m, false));
+            produtos.Add(new produto("Pastel de carne", 6.00m, true));
+            produtos.Add(new produto("Pastel de queijo", 5.50m, true));
+            produtos.Add(new produto("Suco natural(300ml)", 4.00m, true));
+            produtos.Add(new produto("Refrigerante lata", 4.50m, false));
+            produtos.Add(new produto("Hambúrguer simples ", 8.00m, true));
+            produtos.Add(new produto("Hambúrguer com queijo", 9.00m, true));
+            produtos.Add(new produto("X-Tudo", 12.00m, true));
+            produtos.Add(new produto("Água mineral(500ml)", 2.50m, false));
 
 
         }
@@ -78,7 +78,7 @@ namespace cantinaC_
             }
             else
             {
-                var novoProduto = new produto(produtoSelecionado.Nome, produtoSelecionado.Preco)
+                var novoProduto = new produto(produtoSelecionado.Nome, produtoSelecionado.Preco, produtoSelecionado.isChapa)
                 {
                     Quantidade = quantidade
                 };
