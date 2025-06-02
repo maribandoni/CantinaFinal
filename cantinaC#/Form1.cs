@@ -135,6 +135,7 @@ namespace cantinaC_
         {
 
         }
+        public static List<pedido> pedidosFinalizados = new List<pedido>();
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -186,12 +187,18 @@ namespace cantinaC_
                 }
 
                 MessageBox.Show("Compra finalizada!");
+                var novoPedido = new pedido(textBox1.Text, metodoPagamento, checkBox1.Checked, new List<produto>(carrinhos));
+                pedidosFinalizados.Add(novoPedido);
+
                 Limpar();
             }
             else
             {
                 MessageBox.Show("Compra finalizada!");
                 Extrato();
+                var novoPedido = new pedido(textBox1.Text, metodoPagamento, checkBox1.Checked, new List<produto>(carrinhos));
+                pedidosFinalizados.Add(novoPedido);
+
                 Limpar();
             }
 
@@ -316,8 +323,9 @@ namespace cantinaC_
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            balcao Balcao = new balcao();
-            Balcao.Show();
+            balcao telaBalcao = new balcao();
+            telaBalcao.Show();
+
         }
 
         private void pictureBox1_Click_3(object sender, EventArgs e)

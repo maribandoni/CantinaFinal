@@ -6,21 +6,22 @@ using System.Threading.Tasks;
 
 namespace cantinaC_
 {
-    internal class produto
+    public class produto
     {
-        public int id { get; set; }
+      
         public string Nome { get; set; }
         public decimal Preco { get; set; }
         public bool isChapa { get; set; }
         public int Quantidade { get; set; }
-       // public override string ToString();
+      
 
-        
+
         public produto(string nome, decimal preco, bool isChapa)
         {
-           this.Nome = nome;
-            this.Preco = preco;
-            this.Quantidade = 0;
+           
+            Nome = nome;
+            Preco = preco;
+            Quantidade = 0;
             this.isChapa = isChapa;
         }
 
@@ -29,5 +30,6 @@ namespace cantinaC_
             return $"{Nome} - {Preco:C}";
         }
     }
-   
+  
+
 }
