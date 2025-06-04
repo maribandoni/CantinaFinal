@@ -11,8 +11,8 @@ namespace cantinaC_
 {
     public partial class Form1 : Form
     {
-        List<produto> produtos = new List<produto>();
-        List<produto> carrinhos = new List<produto>();
+        List<Produto> produtos = new List<Produto>();
+        List<Produto> carrinhos = new List<Produto>();
 
         decimal totalCarrinho = 0;
 
@@ -25,16 +25,16 @@ namespace cantinaC_
 
         private void AdicionarProduto()
         {
-            produtos.Add(new produto("Pão de queijo", 3.50m, false));
-            produtos.Add(new produto("Coxinha", 5.00m, false));
-            produtos.Add(new produto("Pastel de carne", 6.00m, true));
-            produtos.Add(new produto("Pastel de queijo", 5.50m, true));
-            produtos.Add(new produto("Suco natural(300ml)", 4.00m, true));
-            produtos.Add(new produto("Refrigerante lata", 4.50m, false));
-            produtos.Add(new produto("Hambúrguer simples ", 8.00m, true));
-            produtos.Add(new produto("Hambúrguer com queijo", 9.00m, true));
-            produtos.Add(new produto("X-Tudo", 12.00m, true));
-            produtos.Add(new produto("Água mineral(500ml)", 2.50m, false));
+            produtos.Add(new Produto("Pão de queijo", 3.50m, false));
+            produtos.Add(new Produto("Coxinha", 5.00m, false));
+            produtos.Add(new Produto("Pastel de carne", 6.00m, true));
+            produtos.Add(new Produto("Pastel de queijo", 5.50m, true));
+            produtos.Add(new Produto("Suco natural(300ml)", 4.00m, true));
+            produtos.Add(new Produto("Refrigerante lata", 4.50m, false));
+            produtos.Add(new Produto("Hambúrguer simples ", 8.00m, true));
+            produtos.Add(new Produto("Hambúrguer com queijo", 9.00m, true));
+            produtos.Add(new Produto("X-Tudo", 12.00m, true));
+            produtos.Add(new Produto("Água mineral(500ml)", 2.50m, false));
 
 
         }
@@ -63,7 +63,7 @@ namespace cantinaC_
                 return;
             }
 
-            var produtoSelecionado = (produto)listBoxProduto.SelectedItem;
+            var produtoSelecionado = (Produto)listBoxProduto.SelectedItem;
             int quantidade = (int)numericUpDownQuantidade.Value;
 
             if (quantidade <= 0)
@@ -78,7 +78,7 @@ namespace cantinaC_
             }
             else
             {
-                var novoProduto = new produto(produtoSelecionado.Nome, produtoSelecionado.Preco, produtoSelecionado.isChapa)
+                var novoProduto = new Produto(produtoSelecionado.Nome, produtoSelecionado.Preco, produtoSelecionado.isChapa)
                 {
                     Quantidade = quantidade
                 };
@@ -135,7 +135,7 @@ namespace cantinaC_
         {
 
         }
-        public static List<pedido> pedidosFinalizados = new List<pedido>();
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -186,23 +186,30 @@ namespace cantinaC_
                     Limpar();
                 }
 
-                MessageBox.Show("Compra finalizada!");
-                var novoPedido = new pedido(textBox1.Text, metodoPagamento, checkBox1.Checked, new List<produto>(carrinhos));
-                pedidosFinalizados.Add(novoPedido);
 
-                Limpar();
+            }
+            MessageBox.Show("Compra finalizada!");
+            Extrato();
+            bool pedidoChapa = false;
+            if (pedidoChapa)
+            {
+                Status statusPedido = Status.PREPARANDO;
+                var novoPedido = new Pedido(textBox1.Text, metodoPagamento, checkBox1.Checked, new List<Produto>(carrinhos), statusPedido);
+                PedidosFinalizados.pedidosFinalizados.Add(novoPedido);
             }
             else
             {
-                MessageBox.Show("Compra finalizada!");
-                Extrato();
-                var novoPedido = new pedido(textBox1.Text, metodoPagamento, checkBox1.Checked, new List<produto>(carrinhos));
-                pedidosFinalizados.Add(novoPedido);
-
-                Limpar();
+                Status statusPedido = Status.PRONTO;
+                var novoPedido = new Pedido(textBox1.Text, metodoPagamento, checkBox1.Checked, new List<Produto>(carrinhos), statusPedido);
+                PedidosFinalizados.pedidosFinalizados.Add(novoPedido);
             }
+            //erro de logica
 
+            Limpar();
         }
+            
+
+        
         private void Limpar()
         {
 

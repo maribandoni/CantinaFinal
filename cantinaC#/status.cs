@@ -8,9 +8,9 @@ namespace cantinaC_
 {
     public enum Status
     {
-     preparando,
-     pronto,
-     entregue
+     PREPARANDO,
+     PRONTO,
+     ENTREGUE
 
     };
 }

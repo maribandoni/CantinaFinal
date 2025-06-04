@@ -1,20 +1,28 @@
 ﻿namespace cantinaC_
 {
-    public class pedido
+    public class Pedido
     {
         public string Cliente { get; set; }
         public string FormaPagamento { get; set; }
         public bool ParaViagem { get; set; }
-        public List<produto> Itens { get; set; }
+        public List<Produto> Produtos { get; set; }
         public DateTime DataHora { get; set; }
+        public Status status { get; set; }
 
-        public pedido(string cliente, string formaPagamento, bool paraViagem, List<produto> itens)
+        public Pedido(string cliente, string formaPagamento, bool paraViagem, List<Produto> produtos, Status status)
         {
             Cliente = cliente;
             FormaPagamento = formaPagamento;
             ParaViagem = paraViagem;
-            Itens = itens;
+            Produtos = produtos;
             DataHora = DateTime.Now;
+            this.status = status;
+        }
+
+        public override string ToString()
+        {
+            string produtosDescricao = string.Join(", ", Produtos.Select(p => p.Nome)); 
+            return $"{Cliente} - {produtosDescricao}  - {status}";
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cantinaC_
 {
-    public class produto
+    public class Produto
     {
       
         public string Nome { get; set; }
@@ -16,7 +16,7 @@ namespace cantinaC_
       
 
 
-        public produto(string nome, decimal preco, bool isChapa)
+        public Produto(string nome, decimal preco, bool isChapa)
         {
            
             Nome = nome;
