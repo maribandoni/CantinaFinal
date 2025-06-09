@@ -13,7 +13,7 @@ namespace cantinaC_
     public partial class balcao : Form
     {
 
-
+        List<Pedido> pedidos = new List<Pedido>();
         public balcao()
         {
             InitializeComponent();
@@ -32,13 +32,49 @@ namespace cantinaC_
 
         private void balcao_Load(object sender, EventArgs e)
         {
-            foreach(Pedido pedido in PedidosFinalizados.pedidosFinalizados)
-                if(pedido.status == Status.PRONTO)
+            foreach (Pedido pedido in PedidosFinalizados.pedidosFinalizados)
+                if (pedido.status == Status.PRONTO)
                     listBox1.Items.Add(pedido);
-                else
-                {
+            else if(pedido.status == Status.ENTREGUE)
                     listBox2.Items.Add(pedido);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEntrega_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um pedido");
+                return;
+            }
+            var pedidoSelecionado = listBox1.SelectedItem as Pedido;
+
+                if(listBox2.Items.Count == 5)
+                {
+                    listBox2.Items.RemoveAt(4);
                 }
+                pedidoSelecionado.status = Status.ENTREGUE;
+                listBox2.Items.Insert(0, pedidoSelecionado);
+                listBox1.Items.Remove(pedidoSelecionado);
+              
+
+            }
+        
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Selecione um pedido");
+                return;
+            }
+            var pedidoSelecionado = listBox1.SelectedItem as Pedido;
+            listBox1.Items.Remove(pedidoSelecionado); 
+            PedidosFinalizados.pedidosFinalizados.Remove(pedidoSelecionado);
         }
     }
 }
+

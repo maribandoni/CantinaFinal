@@ -34,6 +34,8 @@
             label2 = new Label();
             listBox2 = new ListBox();
             pictureBox2 = new PictureBox();
+            btnEntrega = new Button();
+            btnCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -51,7 +53,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.White;
+            label1.BackColor = Color.FromArgb(243, 241, 238);
             label1.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(12, 40);
             label1.Name = "label1";
@@ -61,17 +63,20 @@
             // 
             // listBox1
             // 
+            listBox1.BackColor = Color.FromArgb(230, 255, 0);
+            listBox1.Font = new Font("Agrandir Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
+            listBox1.ItemHeight = 21;
             listBox1.Location = new Point(12, 76);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(475, 229);
+            listBox1.Size = new Size(475, 214);
             listBox1.TabIndex = 26;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.FromArgb(243, 241, 238);
             label2.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(12, 328);
             label2.Name = "label2";
@@ -81,11 +86,13 @@
             // 
             // listBox2
             // 
+            listBox2.BackColor = Color.FromArgb(230, 255, 0);
+            listBox2.Font = new Font("Agrandir Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listBox2.FormattingEnabled = true;
-            listBox2.ItemHeight = 15;
+            listBox2.ItemHeight = 21;
             listBox2.Location = new Point(12, 383);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(475, 124);
+            listBox2.Size = new Size(475, 109);
             listBox2.TabIndex = 28;
             // 
             // pictureBox2
@@ -97,6 +104,31 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 29;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
+            // 
+            // btnEntrega
+            // 
+            btnEntrega.BackColor = Color.FromArgb(230, 255, 0);
+            btnEntrega.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEntrega.Location = new Point(525, 142);
+            btnEntrega.Name = "btnEntrega";
+            btnEntrega.Size = new Size(154, 61);
+            btnEntrega.TabIndex = 30;
+            btnEntrega.Text = "Finalizar";
+            btnEntrega.UseVisualStyleBackColor = false;
+            btnEntrega.Click += btnEntrega_Click;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.FromArgb(243, 241, 238);
+            btnCancelar.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(565, 209);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(75, 23);
+            btnCancelar.TabIndex = 31;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // balcao
             // 
@@ -104,6 +136,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(202, 196, 183);
             ClientSize = new Size(849, 530);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnEntrega);
             Controls.Add(pictureBox2);
             Controls.Add(listBox2);
             Controls.Add(label2);
@@ -127,5 +161,7 @@
         private Label label2;
         private ListBox listBox2;
         private PictureBox pictureBox2;
+        private Button btnEntrega;
+        private Button btnCancelar;
     }
 }

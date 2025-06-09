@@ -155,14 +155,6 @@ namespace cantinaC_
                 MessageBox.Show("Selecione a Forma de Pagamento");
                 return;
             }
-            if (checkBox1.Checked)
-            {
-                MessageBox.Show("Pedido Marcado como Para Viagem");
-            }
-            else
-            {
-                MessageBox.Show("Pedido Para Consumo no Local");
-            }
 
             string metodoPagamento = comboBox1.SelectedItem?.ToString();
 
@@ -177,39 +169,25 @@ namespace cantinaC_
                 if (troco < 0)
                 {
                     MessageBox.Show("Valor insuficiente!");
-                    return;
+                    return ;
                 }
-                else
-                {
+                else{
                     MessageBox.Show($"Troco: {troco}");
-                    Extrato();
-                    Limpar();
                 }
-
-
             }
-            MessageBox.Show("Compra finalizada!");
             Extrato();
-            bool pedidoChapa = false;
-            if (pedidoChapa)
-            {
-                Status statusPedido = Status.PREPARANDO;
-                var novoPedido = new Pedido(textBox1.Text, metodoPagamento, checkBox1.Checked, new List<Produto>(carrinhos), statusPedido);
-                PedidosFinalizados.pedidosFinalizados.Add(novoPedido);
-            }
-            else
-            {
-                Status statusPedido = Status.PRONTO;
-                var novoPedido = new Pedido(textBox1.Text, metodoPagamento, checkBox1.Checked, new List<Produto>(carrinhos), statusPedido);
-                PedidosFinalizados.pedidosFinalizados.Add(novoPedido);
-            }
-            //erro de logica
+            bool pedidoChapa = carrinhos.Any(p => p.isChapa);
+            Status statusPedido = pedidoChapa ? Status.PREPARANDO : Status.PRONTO;
+
+            var novoPedido = new Pedido(textBox1.Text, metodoPagamento, checkBox1.Checked, new List<Produto>(carrinhos), statusPedido);
+            PedidosFinalizados.pedidosFinalizados.Add(novoPedido);
 
             Limpar();
         }
-            
 
-        
+
+
+
         private void Limpar()
         {
 

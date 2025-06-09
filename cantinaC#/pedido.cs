@@ -21,7 +21,7 @@
 
         public override string ToString()
         {
-            string produtosDescricao = string.Join(", ", Produtos.Select(p => p.Nome)); 
+            string produtosDescricao = string.Join(", ", Produtos.Select(p => $"{p.Quantidade} x {p.Nome}")); 
             return $"{Cliente} - {produtosDescricao}  - {status}";
         }
     }
