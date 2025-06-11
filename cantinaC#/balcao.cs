@@ -37,6 +37,7 @@ namespace cantinaC_
                     listBox1.Items.Add(pedido);
             else if(pedido.status == Status.ENTREGUE)
                     listBox2.Items.Add(pedido);
+           
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

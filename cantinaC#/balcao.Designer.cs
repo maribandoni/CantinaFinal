@@ -43,7 +43,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources._1000106593_removebg_preview__3_2;
-            pictureBox1.Location = new Point(-9, -15);
+            pictureBox1.Location = new Point(-9, -13);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(659, 378);
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -135,7 +135,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(202, 196, 183);
-            ClientSize = new Size(849, 530);
+            ClientSize = new Size(851, 532);
             Controls.Add(btnCancelar);
             Controls.Add(btnEntrega);
             Controls.Add(pictureBox2);

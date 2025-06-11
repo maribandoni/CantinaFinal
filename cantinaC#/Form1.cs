@@ -169,9 +169,10 @@ namespace cantinaC_
                 if (troco < 0)
                 {
                     MessageBox.Show("Valor insuficiente!");
-                    return ;
+                    return;
                 }
-                else{
+                else
+                {
                     MessageBox.Show($"Troco: {troco}");
                 }
             }
@@ -316,6 +317,12 @@ namespace cantinaC_
         private void pictureBox1_Click_3(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Cozinha telaCozinha = new Cozinha();
+            telaCozinha.Show();
         }
     }
 }

@@ -44,6 +44,7 @@
             dateTimePicker1 = new DateTimePicker();
             button1 = new Button();
             pictureBox1 = new PictureBox();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownQuantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -233,12 +234,24 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click_3;
             // 
+            // button2
+            // 
+            button2.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Location = new Point(24, 478);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 24;
+            button2.Text = "Cozinha";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(202, 196, 183);
             ClientSize = new Size(886, 558);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(dateTimePicker1);
             Controls.Add(checkBox1);
@@ -284,5 +297,6 @@
         private DateTimePicker dateTimePicker1;
         private Button button1;
         private PictureBox pictureBox1;
+        private Button button2;
     }
 }
