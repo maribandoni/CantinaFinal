@@ -73,12 +73,14 @@
             // listBox1
             // 
             listBox1.BackColor = Color.FromArgb(230, 255, 0);
+            listBox1.Font = new Font("Agrandir Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
+            listBox1.ItemHeight = 21;
             listBox1.Location = new Point(12, 160);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(448, 229);
+            listBox1.Size = new Size(448, 214);
             listBox1.TabIndex = 32;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // label1
             // 
