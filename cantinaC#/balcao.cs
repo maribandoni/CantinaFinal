@@ -14,6 +14,8 @@ namespace cantinaC_
     {
 
         List<Pedido> pedidos = new List<Pedido>();
+        private TelaChamada chamadaForm;
+        private Chamada nomeForm;
         public balcao()
         {
             InitializeComponent();
@@ -35,9 +37,9 @@ namespace cantinaC_
             foreach (Pedido pedido in PedidosFinalizados.pedidosFinalizados)
                 if (pedido.status == Status.PRONTO)
                     listBox1.Items.Add(pedido);
-            else if(pedido.status == Status.ENTREGUE)
+                else if (pedido.status == Status.ENTREGUE)
                     listBox2.Items.Add(pedido);
-           
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -46,25 +48,32 @@ namespace cantinaC_
         }
 
         private void btnEntrega_Click(object sender, EventArgs e)
+
+
         {
+
+
             if (listBox1.SelectedItem == null)
             {
                 MessageBox.Show("Selecione um pedido");
                 return;
             }
+            nomeForm = new Chamada();
+            nomeForm.ShowDialog();
+
             var pedidoSelecionado = listBox1.SelectedItem as Pedido;
 
-                if(listBox2.Items.Count == 5)
-                {
-                    listBox2.Items.RemoveAt(4);
-                }
-                pedidoSelecionado.status = Status.ENTREGUE;
-                listBox2.Items.Insert(0, pedidoSelecionado);
-                listBox1.Items.Remove(pedidoSelecionado);
-              
-
+            if (listBox2.Items.Count == 5)
+            {
+                listBox2.Items.RemoveAt(4);
             }
-        
+            pedidoSelecionado.status = Status.ENTREGUE;
+            listBox2.Items.Insert(0, pedidoSelecionado);
+            listBox1.Items.Remove(pedidoSelecionado);
+
+
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             if (listBox1.SelectedItem == null)
@@ -73,8 +82,14 @@ namespace cantinaC_
                 return;
             }
             var pedidoSelecionado = listBox1.SelectedItem as Pedido;
-            listBox1.Items.Remove(pedidoSelecionado); 
+            listBox1.Items.Remove(pedidoSelecionado);
             PedidosFinalizados.pedidosFinalizados.Remove(pedidoSelecionado);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TelaChamada chamadaForm = new TelaChamada();
+            chamadaForm.Show();
         }
     }
 }

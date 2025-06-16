@@ -36,6 +36,7 @@
             pictureBox2 = new PictureBox();
             btnEntrega = new Button();
             btnCancelar = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -130,12 +131,23 @@
             btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(565, 238);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 32;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // balcao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(202, 196, 183);
             ClientSize = new Size(851, 532);
+            Controls.Add(button1);
             Controls.Add(btnCancelar);
             Controls.Add(btnEntrega);
             Controls.Add(pictureBox2);
@@ -163,5 +175,6 @@
         private PictureBox pictureBox2;
         private Button btnEntrega;
         private Button btnCancelar;
+        private Button button1;
     }
 }
