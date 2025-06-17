@@ -58,8 +58,8 @@ namespace cantinaC_
                 MessageBox.Show("Selecione um pedido");
                 return;
             }
-            nomeForm = new Chamada();
-            nomeForm.ShowDialog();
+           
+
 
             var pedidoSelecionado = listBox1.SelectedItem as Pedido;
 
@@ -70,6 +70,10 @@ namespace cantinaC_
             pedidoSelecionado.status = Status.ENTREGUE;
             listBox2.Items.Insert(0, pedidoSelecionado);
             listBox1.Items.Remove(pedidoSelecionado);
+
+            nomeForm = new Chamada();// ARRUMAR
+            nomeForm.ShowDialog();
+
 
 
         }

@@ -111,6 +111,7 @@
             // 
             btnEntrega.BackColor = Color.FromArgb(230, 255, 0);
             btnEntrega.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEntrega.ForeColor = SystemColors.ActiveCaptionText;
             btnEntrega.Location = new Point(525, 142);
             btnEntrega.Name = "btnEntrega";
             btnEntrega.Size = new Size(154, 61);
@@ -123,7 +124,7 @@
             // 
             btnCancelar.BackColor = Color.FromArgb(243, 241, 238);
             btnCancelar.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCancelar.Location = new Point(565, 209);
+            btnCancelar.Location = new Point(566, 259);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
             btnCancelar.TabIndex = 31;
@@ -133,12 +134,14 @@
             // 
             // button1
             // 
-            button1.Location = new Point(565, 238);
+            button1.BackColor = Color.FromArgb(230, 255, 0);
+            button1.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(525, 209);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(154, 44);
             button1.TabIndex = 32;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            button1.Text = "Chamar";
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // balcao

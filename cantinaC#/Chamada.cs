@@ -21,16 +21,33 @@ namespace cantinaC_
         {
             foreach (var produto in PedidosFinalizados.pedidosFinalizados)
             {
-                labelNome.Text = produto.Cliente;
-
+                if (produto.status == Status.ENTREGUE)// ARRUMAR
+                {
+                    labelNome.Text = produto.Cliente;
+                }
             }
-
+        
         }
-     
+
 
         private void labelNome_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        { 
+          
         }
     }
 }
