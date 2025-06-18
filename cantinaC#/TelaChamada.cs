@@ -19,17 +19,14 @@ namespace cantinaC_
 
         private void TelaChamada_Load(object sender, EventArgs e)
         {
-            
+
             foreach (Pedido pedido in PedidosFinalizados.pedidosFinalizados)
                 if (pedido.status == Status.PRONTO || pedido.status == Status.PREPARANDO)
-                    listBox1.Items.Insert(0, pedido.Cliente);
-               else if (pedido.status == Status.ENTREGUE)
-                        listBox2.Items.Insert(0, pedido.Cliente);
+                    listBox1.Items.Add(pedido.Cliente);
+                else if (pedido.status == Status.ENTREGUE)
+                    listBox2.Items.Insert(0,pedido.Cliente);
 
-                        if (listBox1.Items.Count == 5)
-                            listBox1.Items.RemoveAt(4);
 
-                    
         }
 
 
@@ -37,5 +34,12 @@ namespace cantinaC_
         {
 
         }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        
     }
+
 }

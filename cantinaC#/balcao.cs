@@ -61,7 +61,7 @@ namespace cantinaC_
            
 
 
-            var pedidoSelecionado = listBox1.SelectedItem as Pedido;
+            Pedido pedidoSelecionado = (Pedido)listBox1.SelectedItem;
 
             if (listBox2.Items.Count == 5)
             {
@@ -71,7 +71,8 @@ namespace cantinaC_
             listBox2.Items.Insert(0, pedidoSelecionado);
             listBox1.Items.Remove(pedidoSelecionado);
 
-            nomeForm = new Chamada();// ARRUMAR
+            nomeForm = new Chamada();
+            nomeForm.chamada(pedidoSelecionado.Cliente);
             nomeForm.ShowDialog();
 
 
@@ -85,7 +86,7 @@ namespace cantinaC_
                 MessageBox.Show("Selecione um pedido");
                 return;
             }
-            var pedidoSelecionado = listBox1.SelectedItem as Pedido;
+            Pedido pedidoSelecionado = (Pedido)listBox1.SelectedItem ;
             listBox1.Items.Remove(pedidoSelecionado);
             PedidosFinalizados.pedidosFinalizados.Remove(pedidoSelecionado);
         }

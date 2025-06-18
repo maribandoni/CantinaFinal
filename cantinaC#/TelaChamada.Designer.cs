@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             listBox1 = new ListBox();
             listBox2 = new ListBox();
+            pictureBox2 = new PictureBox();
+            label1 = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -47,16 +49,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox1.TabIndex = 24;
             pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.bolt;
-            pictureBox2.Location = new Point(620, -2);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(182, 123);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 25;
-            pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -70,22 +62,60 @@
             // 
             // listBox1
             // 
+            listBox1.BackColor = Color.FromArgb(230, 255, 0);
+            listBox1.Font = new Font("Agrandir Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
+            listBox1.ItemHeight = 21;
             listBox1.Location = new Point(44, 120);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(225, 229);
+            listBox1.Size = new Size(225, 235);
             listBox1.TabIndex = 27;
             listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // listBox2
             // 
+            listBox2.BackColor = Color.FromArgb(230, 255, 0);
+            listBox2.Font = new Font("Agrandir Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listBox2.ForeColor = Color.Black;
             listBox2.FormattingEnabled = true;
-            listBox2.ItemHeight = 15;
-            listBox2.Location = new Point(309, 120);
+            listBox2.ItemHeight = 21;
+            listBox2.Location = new Point(303, 120);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(244, 229);
+            listBox2.Size = new Size(244, 235);
             listBox2.TabIndex = 28;
+            listBox2.SelectedIndexChanged += listBox2_SelectedIndexChanged;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.bolt_logo1;
+            pictureBox2.Location = new Point(553, -2);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(247, 165);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 29;
+            pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(243, 241, 238);
+            label1.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(44, 94);
+            label1.Name = "label1";
+            label1.Size = new Size(122, 23);
+            label1.TabIndex = 30;
+            label1.Text = "PREPARANDO:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.FromArgb(243, 241, 238);
+            label2.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(303, 94);
+            label2.Name = "label2";
+            label2.Size = new Size(81, 23);
+            label2.TabIndex = 31;
+            label2.Text = "PRONTO:";
             // 
             // TelaChamada
             // 
@@ -93,26 +123,30 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(202, 196, 183);
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(pictureBox2);
             Controls.Add(listBox2);
             Controls.Add(listBox1);
             Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Name = "TelaChamada";
             Text = "TelaChamada";
             Load += TelaChamada_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private ListBox listBox1;
         private ListBox listBox2;
+        private PictureBox pictureBox2;
+        private Label label1;
+        private Label label2;
     }
 }

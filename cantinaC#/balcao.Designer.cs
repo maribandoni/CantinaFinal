@@ -33,10 +33,10 @@
             listBox1 = new ListBox();
             label2 = new Label();
             listBox2 = new ListBox();
-            pictureBox2 = new PictureBox();
             btnEntrega = new Button();
             btnCancelar = new Button();
             button1 = new Button();
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -96,17 +96,6 @@
             listBox2.Size = new Size(475, 109);
             listBox2.TabIndex = 28;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.bolt;
-            pictureBox2.Location = new Point(681, -24);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(182, 123);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 29;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
-            // 
             // btnEntrega
             // 
             btnEntrega.BackColor = Color.FromArgb(230, 255, 0);
@@ -144,16 +133,26 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.bolt_logo1;
+            pictureBox2.Location = new Point(605, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(247, 164);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 34;
+            pictureBox2.TabStop = false;
+            // 
             // balcao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(202, 196, 183);
             ClientSize = new Size(851, 532);
-            Controls.Add(button1);
-            Controls.Add(btnCancelar);
             Controls.Add(btnEntrega);
             Controls.Add(pictureBox2);
+            Controls.Add(button1);
+            Controls.Add(btnCancelar);
             Controls.Add(listBox2);
             Controls.Add(label2);
             Controls.Add(listBox1);
@@ -175,9 +174,9 @@
         private ListBox listBox1;
         private Label label2;
         private ListBox listBox2;
-        private PictureBox pictureBox2;
         private Button btnEntrega;
         private Button btnCancelar;
         private Button button1;
+        private PictureBox pictureBox2;
     }
 }

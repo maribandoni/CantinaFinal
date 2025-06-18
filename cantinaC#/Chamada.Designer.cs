@@ -33,9 +33,11 @@
             pictureBox2 = new PictureBox();
             label1 = new Label();
             pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // labelNome
@@ -43,7 +45,7 @@
             labelNome.AutoSize = true;
             labelNome.BackColor = Color.FromArgb(230, 255, 0);
             labelNome.Font = new Font("Agrandir Narrow", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelNome.Location = new Point(290, 190);
+            labelNome.Location = new Point(294, 198);
             labelNome.Name = "labelNome";
             labelNome.Size = new Size(99, 43);
             labelNome.TabIndex = 1;
@@ -53,7 +55,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources._1000106593_removebg_preview__3_2;
-            pictureBox1.Location = new Point(-15, -26);
+            pictureBox1.Location = new Point(-15, -17);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(815, 487);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -75,7 +77,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(230, 255, 0);
             label1.Font = new Font("Agrandir Narrow", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(256, 162);
+            label1.Location = new Point(267, 170);
             label1.Name = "label1";
             label1.Size = new Size(144, 28);
             label1.TabIndex = 32;
@@ -84,13 +86,22 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = Properties.Resources.bolt;
-            pictureBox3.Location = new Point(571, -3);
+            pictureBox3.Image = Properties.Resources.bolt_logo1;
+            pictureBox3.Location = new Point(553, -1);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(229, 152);
+            pictureBox3.Size = new Size(247, 165);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 33;
             pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Location = new Point(279, 170);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(162, 160);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 34;
+            pictureBox4.TabStop = false;
             // 
             // Chamada
             // 
@@ -103,12 +114,14 @@
             Controls.Add(labelNome);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox2);
+            Controls.Add(pictureBox4);
             Name = "Chamada";
             Text = "Chamada";
             Load += Chamada_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -120,5 +133,6 @@
         private PictureBox pictureBox2;
         private Label label1;
         private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
     }
 }

@@ -143,9 +143,29 @@ namespace cantinaC_.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bolt_logo {
+            get {
+                object obj = ResourceManager.GetObject("bolt logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bolt_logo_transparent {
             get {
                 object obj = ResourceManager.GetObject("bolt_logo_transparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bolt_logo1 {
+            get {
+                object obj = ResourceManager.GetObject("bolt logo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
             btnEntrega = new Button();
             listBox1 = new ListBox();
             label1 = new Label();
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -47,16 +47,6 @@
             pictureBox1.TabIndex = 25;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.bolt;
-            pictureBox2.Location = new Point(657, -27);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(182, 123);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 30;
-            pictureBox2.TabStop = false;
             // 
             // btnEntrega
             // 
@@ -94,16 +84,26 @@
             label1.Text = "Pedidos em Andamento:";
             label1.Click += label1_Click;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.bolt_logo1;
+            pictureBox2.Location = new Point(577, 1);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(247, 165);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 34;
+            pictureBox2.TabStop = false;
+            // 
             // Cozinha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(202, 196, 183);
             ClientSize = new Size(824, 539);
+            Controls.Add(pictureBox2);
             Controls.Add(label1);
             Controls.Add(listBox1);
             Controls.Add(btnEntrega);
-            Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Name = "Cozinha";
             Text = "Cozinha";
@@ -117,9 +117,9 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
         private Button btnEntrega;
         private ListBox listBox1;
         private Label label1;
+        private PictureBox pictureBox2;
     }
 }

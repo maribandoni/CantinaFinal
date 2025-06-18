@@ -39,16 +39,16 @@
             textBox1 = new TextBox();
             label1 = new Label();
             comboBox1 = new ComboBox();
-            pictureBox2 = new PictureBox();
             checkBox1 = new CheckBox();
             dateTimePicker1 = new DateTimePicker();
             button1 = new Button();
             pictureBox1 = new PictureBox();
             button2 = new Button();
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownQuantidade).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // btnAdicionar
@@ -180,16 +180,6 @@
             comboBox1.Text = "Método de Pagamento";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.bolt;
-            pictureBox2.Location = new Point(705, -26);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(182, 123);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 19;
-            pictureBox2.TabStop = false;
-            // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
@@ -245,17 +235,27 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.bolt_logo1;
+            pictureBox2.Location = new Point(640, -3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(247, 165);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 25;
+            pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(202, 196, 183);
             ClientSize = new Size(886, 558);
+            Controls.Add(pictureBox2);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(dateTimePicker1);
             Controls.Add(checkBox1);
-            Controls.Add(pictureBox2);
             Controls.Add(comboBox1);
             Controls.Add(label1);
             Controls.Add(textBox1);
@@ -273,8 +273,8 @@
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownQuantidade).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -292,11 +292,11 @@
         private TextBox textBox1;
         private Label label1;
         private ComboBox comboBox1;
-        private PictureBox pictureBox2;
         private CheckBox checkBox1;
         private DateTimePicker dateTimePicker1;
         private Button button1;
         private PictureBox pictureBox1;
         private Button button2;
+        private PictureBox pictureBox2;
     }
 }

@@ -19,13 +19,7 @@ namespace cantinaC_
 
         private void Chamada_Load(object sender, EventArgs e)
         {
-            foreach (var produto in PedidosFinalizados.pedidosFinalizados)
-            {
-                if (produto.status == Status.ENTREGUE)// ARRUMAR
-                {
-                    labelNome.Text = produto.Cliente;
-                }
-            }
+         
         
         }
 
@@ -49,5 +43,10 @@ namespace cantinaC_
         { 
           
         }
+        public void chamada(string nomeCliente)
+        {
+            labelNome.Text = nomeCliente;
+        }
+        
     }
 }
