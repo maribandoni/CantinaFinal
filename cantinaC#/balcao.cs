@@ -58,7 +58,7 @@ namespace cantinaC_
                 MessageBox.Show("Selecione um pedido");
                 return;
             }
-           
+
 
 
             Pedido pedidoSelecionado = (Pedido)listBox1.SelectedItem;
@@ -86,7 +86,7 @@ namespace cantinaC_
                 MessageBox.Show("Selecione um pedido");
                 return;
             }
-            Pedido pedidoSelecionado = (Pedido)listBox1.SelectedItem ;
+            Pedido pedidoSelecionado = (Pedido)listBox1.SelectedItem;
             listBox1.Items.Remove(pedidoSelecionado);
             PedidosFinalizados.pedidosFinalizados.Remove(pedidoSelecionado);
         }
@@ -95,6 +95,11 @@ namespace cantinaC_
         {
             TelaChamada chamadaForm = new TelaChamada();
             chamadaForm.Show();
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

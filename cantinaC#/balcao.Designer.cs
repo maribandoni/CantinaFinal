@@ -95,6 +95,7 @@
             listBox2.Name = "listBox2";
             listBox2.Size = new Size(475, 109);
             listBox2.TabIndex = 28;
+            listBox2.SelectedIndexChanged += listBox2_SelectedIndexChanged;
             // 
             // btnEntrega
             // 
